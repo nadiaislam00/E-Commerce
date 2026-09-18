@@ -10,9 +10,21 @@ export const ToastProvider = ({ children }) => {
     setToasts((prev) => prev.filter((toast) => toast.id !== id));
   }, []);
 
-  const addToast = useCallback((message, type = 'info', duration = 3000) => {
+  const addToast = useCallback((payload, explicitType, explicitDuration) => {
     const id = generateId();
-    const newToast = { id, message, type, duration };
+    let message = payload;
+    let type = explicitType || 'info';
+    let duration = explicitDuration !== undefined ? explicitDuration : 3000;
+    let title = null;
+
+    if (payload !== null && typeof payload === 'object') {
+      message = payload.message || payload.description || '';
+      title = payload.title || '';
+      type = payload.type || type;
+      if (payload.duration !== undefined) duration = payload.duration;
+    }
+
+    const newToast = { id, message, title, type, duration };
     
     setToasts((prev) => [...prev, newToast]);
 
@@ -46,8 +58,11 @@ export const ToastProvider = ({ children }) => {
             } transition-all transform duration-300 flex items-center justify-between`}
             style={{ minWidth: '250px' }}
           >
-            <span>{toast.message}</span>
-            <button onClick={() => removeToast(toast.id)} className="ml-4 text-white hover:text-gray-200">
+            <div className="flex flex-col">
+              {toast.title && <span className="font-bold text-sm mb-0.5">{toast.title}</span>}
+              <span className="text-sm">{String(toast.message)}</span>
+            </div>
+            <button onClick={() => removeToast(toast.id)} className="ml-4 text-white hover:text-gray-200 shrink-0 self-start">
               &times;
             </button>
           </div>
