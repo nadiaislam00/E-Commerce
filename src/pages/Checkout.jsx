@@ -199,7 +199,7 @@ export default function Checkout() {
           <form onSubmit={handleSubmit} className="space-y-10">
             
             {/* Customer Information */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#E5E1DB]">
+            <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
               <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">1</span>
                 Customer Information
@@ -236,7 +236,7 @@ export default function Checkout() {
             </section>
 
             {/* Shipping Address */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#E5E1DB]">
+            <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-serif text-[#1B2A4A] flex items-center">
                   <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">2</span>
@@ -301,7 +301,7 @@ export default function Checkout() {
             </section>
 
             {/* Delivery Method */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#E5E1DB]">
+            <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
               <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">3</span>
                 Delivery Method
@@ -312,14 +312,14 @@ export default function Checkout() {
                 onChange={handleChange}
                 options={deliveryOptions}
               />
-              <div className="mt-4 p-3 bg-[#F2EDE8] rounded-md text-sm text-[#6B6B6B] flex items-center">
+              <div className="mt-4 p-3 bg-[#F2EDE8] rounded-md text-sm text-[#A3A3A3] flex items-center">
                 <Truck className="w-4 h-4 mr-2 text-[#C8956C]" />
                 Estimated delivery date: <strong>{estimatedDelivery}</strong>
               </div>
             </section>
 
             {/* Payment Method */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#E5E1DB]">
+            <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
               <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
                 <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">4</span>
                 Payment Method
@@ -334,8 +334,8 @@ export default function Checkout() {
               />
 
               {formData.paymentMethod === 'card' && (
-                <div className="bg-[#FAFAF7] p-5 rounded-lg border border-[#E5E1DB] space-y-4">
-                  <div className="flex items-center text-sm text-[#6B6B6B] mb-2">
+                <div className="bg-[#0E0E0E] p-5 rounded-lg border border-[#2F2F2F] space-y-4">
+                  <div className="flex items-center text-sm text-[#A3A3A3] mb-2">
                     <Info className="w-4 h-4 mr-2" />
                     Payment is simulated — no real charges will be made.
                   </div>
@@ -377,15 +377,15 @@ export default function Checkout() {
               )}
 
               {formData.paymentMethod === 'cod' && (
-                <div className="bg-[#FAFAF7] p-5 rounded-lg border border-[#E5E1DB] text-center">
+                <div className="bg-[#0E0E0E] p-5 rounded-lg border border-[#2F2F2F] text-center">
                   <Package className="w-8 h-8 mx-auto text-[#1B2A4A] mb-3" />
-                  <p className="text-[#1A1A1A] font-medium">Pay with cash upon delivery.</p>
-                  <p className="text-sm text-[#6B6B6B] mt-1">Please have exact change available.</p>
+                  <p className="text-white font-medium">Pay with cash upon delivery.</p>
+                  <p className="text-sm text-[#A3A3A3] mt-1">Please have exact change available.</p>
                 </div>
               )}
 
               {formData.paymentMethod === 'mobile' && (
-                <div className="bg-[#FAFAF7] p-5 rounded-lg border border-[#E5E1DB]">
+                <div className="bg-[#0E0E0E] p-5 rounded-lg border border-[#2F2F2F]">
                   <Input 
                     label="Mobile Wallet Number (bKash/GCash)" 
                     name="mobileNumber"
@@ -398,10 +398,10 @@ export default function Checkout() {
               )}
 
               {formData.paymentMethod === 'paypal' && (
-                <div className="bg-[#FAFAF7] p-5 rounded-lg border border-[#E5E1DB] text-center">
+                <div className="bg-[#0E0E0E] p-5 rounded-lg border border-[#2F2F2F] text-center">
                   <Wallet className="w-8 h-8 mx-auto text-[#003087] mb-3" />
-                  <p className="text-[#1A1A1A] font-medium">You will be redirected to PayPal</p>
-                  <p className="text-sm text-[#6B6B6B] mt-1">Complete your purchase securely on PayPal's website.</p>
+                  <p className="text-white font-medium">You will be redirected to PayPal</p>
+                  <p className="text-sm text-[#A3A3A3] mt-1">Complete your purchase securely on PayPal's website.</p>
                 </div>
               )}
             </section>
@@ -410,7 +410,7 @@ export default function Checkout() {
 
         {/* Right Column: Order Summary */}
         <div className="w-full lg:w-[40%]">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-[#E5E1DB] sticky top-8">
+          <div className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F] sticky top-8">
             <h2 className="text-xl font-serif text-[#1B2A4A] mb-6">Order Summary</h2>
             
             <div className="space-y-4 mb-6 max-h-80 overflow-y-auto pr-2">
@@ -418,23 +418,23 @@ export default function Checkout() {
                 <div key={`${item.id}-${item.color}-${item.size}`} className="flex items-start">
                   <img src={item.image} alt={item.name} className="w-16 h-20 object-cover rounded bg-[#F2EDE8]" />
                   <div className="ml-4 flex-1">
-                    <h4 className="text-sm font-medium text-[#1A1A1A]">{item.name}</h4>
-                    <p className="text-xs text-[#6B6B6B] mt-1">
+                    <h4 className="text-sm font-medium text-white">{item.name}</h4>
+                    <p className="text-xs text-[#A3A3A3] mt-1">
                       {item.color && <span>{item.color}</span>}
                       {item.color && item.size && <span> • </span>}
                       {item.size && <span>{item.size}</span>}
                     </p>
-                    <p className="text-xs text-[#6B6B6B] mt-1">Qty: {item.quantity}</p>
+                    <p className="text-xs text-[#A3A3A3] mt-1">Qty: {item.quantity}</p>
                   </div>
-                  <div className="text-sm font-medium text-[#1A1A1A]">
+                  <div className="text-sm font-medium text-white">
                     ${(item.price * item.quantity).toFixed(2)}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="border-t border-[#E5E1DB] pt-4 space-y-3">
-              <div className="flex justify-between text-sm text-[#6B6B6B]">
+            <div className="border-t border-[#2F2F2F] pt-4 space-y-3">
+              <div className="flex justify-between text-sm text-[#A3A3A3]">
                 <span>Subtotal</span>
                 <span>${cartTotals.subtotal.toFixed(2)}</span>
               </div>
@@ -444,17 +444,17 @@ export default function Checkout() {
                   <span>-${cartTotals.discount.toFixed(2)}</span>
                 </div>
               )}
-              <div className="flex justify-between text-sm text-[#6B6B6B]">
+              <div className="flex justify-between text-sm text-[#A3A3A3]">
                 <span>Shipping</span>
                 <span>{shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}</span>
               </div>
-              <div className="flex justify-between text-sm text-[#6B6B6B]">
+              <div className="flex justify-between text-sm text-[#A3A3A3]">
                 <span>Tax</span>
                 <span>${cartTotals.tax.toFixed(2)}</span>
               </div>
             </div>
 
-            <div className="border-t border-[#E5E1DB] mt-4 pt-4 mb-6">
+            <div className="border-t border-[#2F2F2F] mt-4 pt-4 mb-6">
               <div className="flex justify-between items-center text-lg font-serif font-bold text-[#1B2A4A]">
                 <span>Total</span>
                 <span>${finalTotal.toFixed(2)}</span>
@@ -470,7 +470,7 @@ export default function Checkout() {
               {isSubmitting ? 'Processing...' : 'Place Order'}
             </Button>
             
-            <p className="text-xs text-center text-[#6B6B6B] mt-4">
+            <p className="text-xs text-center text-[#A3A3A3] mt-4">
               By placing your order, you agree to our Terms of Service and Privacy Policy.
             </p>
           </div>
