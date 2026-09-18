@@ -405,7 +405,7 @@ export default function ProductDetail() {
             <div className="flex justify-between items-center mb-6">
               <h3 className="font-semibold">{reviews.length} Reviews</h3>
               <select 
-                className="border border-[#2F2F2F] rounded-md px-3 py-1.5 text-sm bg-white"
+                className="border border-[#2F2F2F] rounded-md px-3 py-1.5 text-sm bg-[#141414] text-white"
                 value={reviewSort}
                 onChange={(e) => setReviewSort(e.target.value)}
               >
@@ -470,7 +470,7 @@ export default function ProductDetail() {
       {/* Size Guide Modal (Simple Implementation) */}
       {sizeGuideOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-lg w-full p-6 relative">
+          <div className="bg-[#141414] rounded-xl max-w-lg w-full p-6 relative">
             <button 
               className="absolute top-4 right-4 text-[#A3A3A3] hover:text-[#C9A84C]"
               onClick={() => setSizeGuideOpen(false)}
