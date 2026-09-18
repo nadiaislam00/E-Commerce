@@ -58,7 +58,7 @@ export default function Cart() {
           
           <div className="bg-[#141414] rounded-xl border border-[#2F2F2F] p-12 max-w-2xl mx-auto text-center">
             <EmptyState 
-              icon={<ShoppingBag className="w-12 h-12 text-[#9B9B9B]" />}
+              icon={ShoppingBag}
               title="Your cart is empty"
               description="Looks like you haven't added anything to your cart yet."
               action={

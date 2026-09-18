@@ -19,14 +19,14 @@ export default function OrderConfirmation() {
         </div>
       </div>
       
-      <h1 className="text-3xl md:text-4xl font-serif text-[#1B2A4A] mb-2">Order Placed Successfully!</h1>
+      <h1 className="text-3xl md:text-4xl font-serif text-[#C9A84C] mb-2">Order Placed Successfully!</h1>
       <p className="text-gray-600 mb-8">Thank you for your purchase.</p>
       
       <div className="bg-white rounded-xl shadow-sm border border-[#E5E1DB] overflow-hidden text-left mb-8">
         <div className="bg-[#FAFAF7] p-6 border-b border-[#E5E1DB] flex flex-col sm:flex-row sm:items-center justify-between">
           <div>
             <p className="text-sm text-[#6B6B6B]">Order Number</p>
-            <p className="text-xl font-bold text-[#1B2A4A]">#{orderId || 'ORD-9382103'}</p>
+            <p className="text-xl font-bold text-[#C9A84C]">#{orderId || 'ORD-9382103'}</p>
           </div>
           <div className="mt-4 sm:mt-0 text-sm text-[#6B6B6B]">
             <p>Date: {new Date().toLocaleDateString()}</p>
@@ -34,7 +34,7 @@ export default function OrderConfirmation() {
         </div>
         
         <div className="p-6">
-          <h3 className="text-lg font-serif text-[#1B2A4A] mb-4">Order Details</h3>
+          <h3 className="text-lg font-serif text-[#C9A84C] mb-4">Order Details</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
@@ -76,7 +76,7 @@ export default function OrderConfirmation() {
                 <Package className="w-5 h-5 text-[#6B6B6B] mr-3 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-medium text-[#1A1A1A]">Order Total</h4>
-                  <p className="text-lg font-bold text-[#1B2A4A] mt-1">$284.50</p>
+                  <p className="text-lg font-bold text-[#C9A84C] mt-1">$284.50</p>
                 </div>
               </div>
             </div>

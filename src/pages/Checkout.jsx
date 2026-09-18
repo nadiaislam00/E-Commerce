@@ -167,7 +167,7 @@ export default function Checkout() {
   if (cartItems.length === 0) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h2 className="text-3xl font-serif text-[#1B2A4A] mb-4">Your cart is empty</h2>
+        <h2 className="text-3xl font-serif text-[#C9A84C] mb-4">Your cart is empty</h2>
         <p className="text-gray-600 mb-8">Add some items to your cart before checking out.</p>
         <Link to="/">
           <Button variant="primary">Continue Shopping</Button>
@@ -200,8 +200,8 @@ export default function Checkout() {
             
             {/* Customer Information */}
             <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
-              <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">1</span>
+              <h2 className="text-xl font-serif text-[#C9A84C] mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#0E0E0E] flex items-center justify-center text-sm mr-3">1</span>
                 Customer Information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -238,8 +238,8 @@ export default function Checkout() {
             {/* Shipping Address */}
             <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-serif text-[#1B2A4A] flex items-center">
-                  <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">2</span>
+                <h2 className="text-xl font-serif text-[#C9A84C] flex items-center">
+                  <span className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#0E0E0E] flex items-center justify-center text-sm mr-3">2</span>
                   Shipping Address
                 </h2>
               </div>
@@ -302,8 +302,8 @@ export default function Checkout() {
 
             {/* Delivery Method */}
             <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
-              <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">3</span>
+              <h2 className="text-xl font-serif text-[#C9A84C] mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#0E0E0E] flex items-center justify-center text-sm mr-3">3</span>
                 Delivery Method
               </h2>
               <RadioGroup
@@ -320,8 +320,8 @@ export default function Checkout() {
 
             {/* Payment Method */}
             <section className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F]">
-              <h2 className="text-xl font-serif text-[#1B2A4A] mb-6 flex items-center">
-                <span className="w-8 h-8 rounded-full bg-[#1B2A4A] text-white flex items-center justify-center text-sm mr-3">4</span>
+              <h2 className="text-xl font-serif text-[#C9A84C] mb-6 flex items-center">
+                <span className="w-8 h-8 rounded-full bg-[#C9A84C] text-[#0E0E0E] flex items-center justify-center text-sm mr-3">4</span>
                 Payment Method
               </h2>
               
@@ -343,7 +343,7 @@ export default function Checkout() {
                     label="Card Number" 
                     name="cardNumber"
                     placeholder="0000 0000 0000 0000"
-                    icon={<CreditCard className="w-5 h-5 text-gray-400" />}
+                    icon={CreditCard}
                     value={formData.cardNumber}
                     onChange={handleChange}
                     error={errors.cardNumber}
@@ -378,7 +378,7 @@ export default function Checkout() {
 
               {formData.paymentMethod === 'cod' && (
                 <div className="bg-[#0E0E0E] p-5 rounded-lg border border-[#2F2F2F] text-center">
-                  <Package className="w-8 h-8 mx-auto text-[#1B2A4A] mb-3" />
+                  <Package className="w-8 h-8 mx-auto text-[#C9A84C] mb-3" />
                   <p className="text-white font-medium">Pay with cash upon delivery.</p>
                   <p className="text-sm text-[#A3A3A3] mt-1">Please have exact change available.</p>
                 </div>
@@ -411,7 +411,7 @@ export default function Checkout() {
         {/* Right Column: Order Summary */}
         <div className="w-full lg:w-[40%]">
           <div className="bg-[#141414] p-6 rounded-xl shadow-sm border border-[#2F2F2F] sticky top-8">
-            <h2 className="text-xl font-serif text-[#1B2A4A] mb-6">Order Summary</h2>
+            <h2 className="text-xl font-serif text-[#C9A84C] mb-6">Order Summary</h2>
             
             <div className="space-y-4 mb-6 max-h-80 overflow-y-auto pr-2">
               {cartItems.map(item => (
@@ -455,7 +455,7 @@ export default function Checkout() {
             </div>
 
             <div className="border-t border-[#2F2F2F] mt-4 pt-4 mb-6">
-              <div className="flex justify-between items-center text-lg font-serif font-bold text-[#1B2A4A]">
+              <div className="flex justify-between items-center text-lg font-serif font-bold text-[#C9A84C]">
                 <span>Total</span>
                 <span>${finalTotal.toFixed(2)}</span>
               </div>

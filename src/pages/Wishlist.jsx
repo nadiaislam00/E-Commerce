@@ -68,7 +68,7 @@ export default function Wishlist() {
         {wishlistCount === 0 ? (
           <div className="bg-[#141414] rounded-xl border border-[#2F2F2F] p-12 max-w-2xl mx-auto text-center mt-12">
             <EmptyState 
-              icon={<Heart className="w-12 h-12 text-[#737373]" />}
+              icon={Heart}
               title="Your wishlist is empty"
               description="Save items you love to your wishlist to review or buy them later."
               action={

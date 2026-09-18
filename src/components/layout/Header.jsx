@@ -70,23 +70,23 @@ export default function Header() {
 
   return (
     <>
-      <header className={`w-full z-40 text-white transition-all duration-250 ${isScrolled ? 'sticky top-0 shadow-[0_4px_24px_rgba(0,0,0,0.7)]' : 'relative'}`}>
-
-        {/* Announcement Bar */}
-        {announcementVisible && !isScrolled && (
-          <div className="bg-[#C9A84C] text-[#0E0E0E] text-xs py-2 px-8 sm:px-12 flex justify-between items-center relative">
-            <div className="flex-1 text-center font-semibold tracking-wide animate-fade-in truncate sm:overflow-visible">
-              {announcements[announcementIndex]}
-            </div>
-            <button
-              onClick={dismissAnnouncement}
-              className="absolute right-3 sm:right-4 text-[#0E0E0E]/70 hover:text-[#0E0E0E] transition-colors p-1"
-              aria-label="Dismiss announcement"
-            >
-              <X size={14} />
-            </button>
+      {/* Announcement Bar */}
+      {announcementVisible && (
+        <div className="bg-[#C9A84C] text-[#0E0E0E] text-xs py-2 px-8 sm:px-12 flex justify-between items-center relative z-50">
+          <div className="flex-1 text-center font-semibold tracking-wide animate-fade-in truncate sm:overflow-visible">
+            {announcements[announcementIndex]}
           </div>
-        )}
+          <button
+            onClick={dismissAnnouncement}
+            className="absolute right-3 sm:right-4 text-[#0E0E0E]/70 hover:text-[#0E0E0E] transition-colors p-1"
+            aria-label="Dismiss announcement"
+          >
+            <X size={14} />
+          </button>
+        </div>
+      )}
+
+      <header className={`w-full z-40 text-white transition-all duration-250 sticky top-0 ${isScrolled ? 'shadow-[0_4px_24px_rgba(0,0,0,0.7)]' : ''}`}>
 
         {/* Main Header */}
         <div className="bg-[#141414] border-b border-[#2F2F2F]">
